@@ -25,4 +25,27 @@ function arrayToLengthCounters(animales) {
   
     return animalLengths;
   }
+  /*  
+  Ejercicio 3: 
+  Implementar la función 'findKeysInCommon' que toma dos objetos y retorna un array con los nombres de las 
+  propiedades que tienen en común.
+  Ejemplo:
+  findKeysInCommon({a: 1, b: 2, c: 3}, {b: 4, c: 5, d: 6}) debería retornar ['b', 'c']
+*/
+
+function findKeysInCommon(objeto1, objeto2) {
+    const keysObjeto1 = Object.keys(objeto1);
+    const keysObjeto2 = Object.keys(objeto2);
   
+    keysEnComun = keysObjeto1.filter(key => keysObjeto2.includes(key));
+  
+    return keysEnComun;
+  }
+  
+  function main() {
+    console.log(extractValues({a: 1, b: 2, c: 3}));
+    console.log(arrayToLengthCounters(['gato', 'perro', 'elefante']));
+    console.log(findKeysInCommon({a: 1, b: 2, c: 3}, {b: 4, c: 5, d: 6}));
+  }
+  
+  main();
